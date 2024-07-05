@@ -1,9 +1,9 @@
-it("Component Attribute Inherit expression", function (done) {
+it("Component Attribute Inherit escape", function (done) {
     // [inject] init
 
     var span = wrap.getElementsByTagName('span')[0];
     expect(span.innerHTML).toContain('Hahaha');
-    expect(span.getAttribute('bool')).toBe('false');
+    expect(span.getAttribute('data-json')).toBe('{"test":1}');
     expect(span.getAttribute('name')).toBe('Hahaha');
     expect(span.getAttribute('data-t')).toBe('state:Hahaha');
 

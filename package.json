@@ -1,6 +1,6 @@
 {
   "name": "san-html-cases",
-  "version": "3.14.6",
+  "version": "3.14.7",
   "description": "本仓库维护 San 在不同的使用场景下正确的 HTML 是什么。即 [san-ssr][san-ssr] 应当产出怎样的 HTML，以及 [san 核心][san] 正确反解依赖怎样的 HTML。因此本仓库就是 San HTML 的规范，并由 san 和 san-ssr 两个仓库的 e2e 测试来确保有效。",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -21,5 +21,7 @@ it("Component Attribute Inherit id、class、style", function (done) {
     expect(spanA.getAttribute('style')).toContain('background: green');
     expect(spanA.getAttribute('style')).not.toContain('color: red');
 
+    myComponent.dispose();
+    document.body.removeChild(wrap);
     done();
 });

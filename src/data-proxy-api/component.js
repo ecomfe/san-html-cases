@@ -11,7 +11,12 @@ var MyComponent = san.defineComponent({
     },
     computed: {
         newName() {
-            return this.d.name + ' - icon';
+            return this.d.upName + ' - icon';
+        },
+
+        upName() {
+            var name = this.d.name;
+            return name.slice(0, 1).toUpperCase() + name.slice(1);
         }
     },
     filters: {

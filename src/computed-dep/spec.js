@@ -8,6 +8,9 @@ it("computed data has dependencies", function (done) {
     expect(b.innerHTML).toBe('11');
     expect(a.innerHTML).toBe('9');
     expect(u.innerHTML).toBe('10');
+    expect(myComponent.d.less).toBe(9);
+    expect(myComponent.d.normal).toBe(10);
+    expect(myComponent.d.more).toBe(11);
 
     myComponent.data.set('num', 5);
 
@@ -15,6 +18,10 @@ it("computed data has dependencies", function (done) {
         expect(b.innerHTML).toBe('6');
         expect(a.innerHTML).toBe('4');
         expect(u.innerHTML).toBe('5');
+
+        expect(myComponent.d.less).toBe(4);
+        expect(myComponent.d.normal).toBe(5);
+        expect(myComponent.d.more).toBe(6);
 
         myComponent.dispose();
         document.body.removeChild(wrap);

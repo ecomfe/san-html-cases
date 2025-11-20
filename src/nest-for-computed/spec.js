@@ -6,6 +6,7 @@ it("nest for with computed", function (done) {
     expect(labels[5].innerHTML).toBe('6');
     expect(labels[3].innerHTML).toBe('4');
     expect(labels[1].innerHTML).toBe('2');
+    expect(myComponent.data.get('forms.foo').length).toBe(3);
     myComponent.data.set('formLen', 4);
 
     san.nextTick(function () {
@@ -14,6 +15,8 @@ it("nest for with computed", function (done) {
         expect(labels[3].innerHTML).toBe('4');
         expect(labels[4].innerHTML).toBe('5');
         expect(labels[7].innerHTML).toBe('8');
+
+        expect(myComponent.data.get('forms.foo').length).toBe(4);
 
         myComponent.dispose();
         document.body.removeChild(wrap);

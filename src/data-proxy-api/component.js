@@ -1,7 +1,7 @@
 // update text
 var san = require('san');
 var MyComponent = san.defineComponent({
-    template: '<div>{{count|formatCount}} list: <span s-for="name in list">{{name}}</span></div>',
+    template: '<div><b>{{count|formatCount}}</b><span s-for="name in list">{{name}}</span></div>',
     inited () {
         this.d.count = 2;
         this.initList();

@@ -8,7 +8,7 @@ class MyComponent extends san.Component<any> {
             return this.d.upName + ' - icon';
         },
 
-        upName() {
+        upName(this: MyComponent) {
             var name = this.d.name;
             return name.slice(0, 1).toUpperCase() + name.slice(1);
         }
